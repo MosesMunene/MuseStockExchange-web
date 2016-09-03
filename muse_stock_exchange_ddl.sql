@@ -95,3 +95,38 @@ create table `order` (
     foreign key (person_id) references person (person_id),
     foreign key (stock_id) references stock (stock_id)
 );
+
+create table person_stock(
+    person_id varchar(40),
+    stock_id varchar(5),
+    units long,
+    foreign key (person_id) references person (person_id),
+    foreign key (stock_id) references stock (stock_id)
+);
+
+create table cash_transaction(
+    id varchar(40) primary key,
+    timestamp timestamp,
+    type varchar(10),
+    credit varchar(40),
+    debit varchar(40),
+    amount decimal(10,2),
+    foreign key (credit) references person (person_id),
+    foreign key (debit) references person (person_id)
+);
+
+create table stock_transaction(
+    id varchar(40) primary key,
+    `timestamp` timestamp,
+    seller varchar(40),
+    buyer varchar(40),
+    stock_id varchar(40),
+    units long,
+    price decimal(10,2),
+    foreign key (seller) references person (person_id),
+    foreign key (buyer) references person (person_id)
+);
+
+insert into credential(
+    system@musestockexchange.com, null, SYSTEM
+);

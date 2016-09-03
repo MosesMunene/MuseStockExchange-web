@@ -16,7 +16,7 @@ angular.module("app").directive("orderPanel", ["AccountService", "$rootScope", "
                     console.log(order);
                     $http.post("http://localhost:9095/api/trade/order", order)
                         .then(function success(resp) {
-                            console.log(resp);
+                            console.log(resp.config.data);
                         },
                         function fail() {
                             console.log(resp);

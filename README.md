@@ -7,6 +7,9 @@ This provides the AngularJS client . See https://github.com/MosesMunene/MuseStoc
  - To finally get a grip on client side development and hopefully minimize dependence on client side developers.
  - To experiment with AngularJS (1.5.8) and get familirized with pitfalls, gotchas and design patterns of the approach.
  - Also, I am tired of Java Server Faces.
+
+ #Criticism and comments 
+ These are very much welcomed. Post them as isssues and they will be worked on
  
  #Dev Tools
  - Visual Studio Code

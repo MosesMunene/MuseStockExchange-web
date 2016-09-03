@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'ngCookies', 'tradingPitModule', 'companyModule']);
+var app = angular.module('app', ['ngRoute', 'ngCookies', 'tradingPitModule', 'companyModule', 'profileModule']);
 
 app.constant(
     'AUTH_EVENTS', {
@@ -27,7 +27,7 @@ app.config(['$httpProvider', '$locationProvider', '$routeProvider', 'USER_ROLES'
     $routeProvider.when('/', { templateUrl: '/partials/home.html' })
         .when('/tradingpit', { templateUrl: '/partials/tradingpit.html' })
         .when('/company', { templateUrl: '/partials/company.html' })
-        .when('/profile', { templateUrl: '/partials/profile.html', authorizedRolesRequired: { authorizedRoles: [USER_ROLES.user] } })
+        .when('/profile', { templateUrl: '/partials/profile.html', /*authorizedRolesRequired: { authorizedRoles: [USER_ROLES.user] }*/ })
         .otherwise({ redirectTo: '/' });
 }]).run(['$rootScope', '$location', 'AccountService', 'AUTH_EVENTS', function ($rootScope, $location, AccountService, AUTH_EVENTS) {
     $rootScope.$on("$routeChangeStart", function (event, next, current) {
