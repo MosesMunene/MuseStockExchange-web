@@ -3,8 +3,6 @@ A stock exchange platform modeled after the Narirobi Securities Exchange.
 This provides the AngularJS client . See https://github.com/MosesMunene/MuseStockExchange for REST API.
 
 #Motivation
- - To experiment with Service Oriented Architecture and get familirized with pitfalls, gotchas and design patterns of the approach.
- - To finally get a grip on client side development and hopefully minimize dependence on client side developers.
  - To experiment with AngularJS (1.5.8) and get familirized with pitfalls, gotchas and design patterns of the approach.
  - Also, I am tired of Java Server Faces.
 
